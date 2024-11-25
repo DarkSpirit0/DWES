@@ -224,5 +224,6 @@
         showImage(currentIndex);
     });
 </script>
+
 </body>
 </html>
