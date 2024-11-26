@@ -25,11 +25,20 @@ class CategoriaController {
     }
 
     public function delete($id) {
-        if (!is_numeric($id)) {
-            throw new Exception("ID inválido para eliminación.");
+        try {
+            $this->categoria->id = $id;
+    
+            if ($this->categoria->delete()) {
+                // Después de eliminar, ajustamos el AUTO_INCREMENT
+                $this->categoria->resetAutoIncrement();
+                return "Categoría eliminada correctamente.";
+            } else {
+                return "No se pudo eliminar la categoría.";
+            }
+        } catch (Exception $e) {
+            return "Error al eliminar la categoría: " . $e->getMessage();
         }
-        $this->categoria->id = $id;
-        return $this->categoria->delete();
     }
+    
 }
 ?>

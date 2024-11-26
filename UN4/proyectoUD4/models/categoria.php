@@ -29,10 +29,28 @@ class Categoria {
     }
 
     public function delete() {
-        $query = "DELETE FROM " . $this->table . " WHERE id = :id";
+        $query = "DELETE FROM categorias WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
         return $stmt->execute();
     }
+    
+
+    public function resetAutoIncrement() {
+        $query = "SELECT MAX(id) AS max_id FROM categorias";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        // Calcula el próximo valor de AUTO_INCREMENT
+        $nextId = $result['max_id'] + 1;
+    
+        // Actualiza el valor del AUTO_INCREMENT
+        $alterQuery = "ALTER TABLE categorias AUTO_INCREMENT = :nextId";
+        $stmt = $this->conn->prepare($alterQuery);
+        $stmt->bindParam(':nextId', $nextId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
 }
 ?>
