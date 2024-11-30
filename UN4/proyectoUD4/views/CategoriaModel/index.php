@@ -51,5 +51,14 @@
             <?php endwhile; ?>
         </tbody>
     </table>
+    
+    <div style="text-align: right; margin-bottom: 20px;">
+    <a href="reporte.php" target="_blank">
+        <button style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Generar PDF
+        </button>
+    </a>
+</div>
+
 </body>
 </html>

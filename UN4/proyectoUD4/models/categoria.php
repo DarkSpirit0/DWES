@@ -11,14 +11,14 @@ class Categoria {
     public function __construct($db) {
         $this->conn = $db;
     }
-
+    
     public function getAll() {
-        $query = "SELECT * FROM " . $this->table;
+        $query = "SELECT * FROM categorias";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;
     }
-
+    
     public function create() {
         $query = "INSERT INTO " . $this->table . " (nombre, descripcion, fecha_creacion) VALUES (:nombre, :descripcion, :fecha_creacion)";
         $stmt = $this->conn->prepare($query);
