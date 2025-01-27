@@ -1,0 +1,246 @@
+<<<<<<< HEAD
+<?php
+
+//Generar un Formulario Dinámico con Objetos en PHP
+
+class Formulario {
+    private $campos = [];
+
+    // Método para agregar campos al formulario
+    public function agregarCampo($nombre, $tipo = "text", $label = "") {
+        $this->campos[] = [
+            'nombre' => $nombre,
+            'tipo' => $tipo,
+            'label' => $label
+        ];
+    }
+
+    // Método para renderizar el formulario como HTML
+    public function renderizar() {
+        echo "<form method='post'>";
+
+        foreach ($this->campos as $campo) {
+            echo "<label>{$campo['label']}</label>";
+            echo "<input type='{$campo['tipo']}' name='{$campo['nombre']}'><br><br>";
+        }
+
+        echo "<button type='submit'>Enviar</button>";
+        echo "</form>";
+    }
+}
+
+// Crear una instancia de la clase Formulario
+$formulario = new Formulario();
+$formulario->agregarCampo("nombre", "text", "Nombre:");
+$formulario->agregarCampo("email", "email", "Email:");
+$formulario->agregarCampo("edad", "number", "Edad:");
+
+// Renderizar el formulario en el cliente
+$formulario->renderizar();
+
+
+
+//Generación de una Tabla Dinámica con Objetos
+
+class Tabla {
+    private $datos;
+
+    // Constructor para inicializar los datos de la tabla
+    public function __construct($datos) {
+        $this->datos = $datos;
+    }
+
+    // Método para renderizar la tabla
+    public function renderizar() {
+        echo "<table border='1'>";
+
+        // Encabezado de la tabla
+        echo "<tr>";
+        foreach (array_keys($this->datos[0]) as $header) {
+            echo "<th>$header</th>";
+        }
+        echo "</tr>";
+
+        // Filas de datos
+        foreach ($this->datos as $fila) {
+            echo "<tr>";
+            foreach ($fila as $dato) {
+                echo "<td>$dato</td>";
+            }
+            echo "</tr>";
+        }
+
+        echo "</table>";
+    }
+}
+
+// Datos para la tabla
+$datos = [
+    ['Nombre' => 'Juan', 'Edad' => 25, 'Ciudad' => 'Madrid'],
+    ['Nombre' => 'María', 'Edad' => 30, 'Ciudad' => 'Barcelona'],
+    ['Nombre' => 'Pedro', 'Edad' => 22, 'Ciudad' => 'Valencia']
+];
+
+// Crear una instancia de la clase Tabla y renderizarla
+$tabla = new Tabla($datos);
+$tabla->renderizar();
+
+
+//Generar una Lista de Opciones (Dropdown) Dinámicamente
+
+class Select {
+    private $opciones;
+
+    // Constructor para inicializar las opciones
+    public function __construct($opciones) {
+        $this->opciones = $opciones;
+    }
+
+    // Método para renderizar el select
+    public function renderizar($nombre) {
+        echo "<label for='$nombre'>Seleccione una opción:</label>";
+        echo "<select name='$nombre' id='$nombre'>";
+
+        foreach ($this->opciones as $valor => $etiqueta) {
+            echo "<option value='$valor'>$etiqueta</option>";
+        }
+
+        echo "</select>";
+    }
+}
+
+// Opciones para el select
+$opciones = [
+    'es' => 'Español',
+    'en' => 'Inglés',
+    'fr' => 'Francés'
+];
+
+// Crear una instancia de la clase Select y renderizarla
+$select = new Select($opciones);
+$select->renderizar("idioma");
+
+=======
+<?php
+
+//Generar un Formulario Dinámico con Objetos en PHP
+
+class Formulario {
+    private $campos = [];
+
+    // Método para agregar campos al formulario
+    public function agregarCampo($nombre, $tipo = "text", $label = "") {
+        $this->campos[] = [
+            'nombre' => $nombre,
+            'tipo' => $tipo,
+            'label' => $label
+        ];
+    }
+
+    // Método para renderizar el formulario como HTML
+    public function renderizar() {
+        echo "<form method='post'>";
+
+        foreach ($this->campos as $campo) {
+            echo "<label>{$campo['label']}</label>";
+            echo "<input type='{$campo['tipo']}' name='{$campo['nombre']}'><br><br>";
+        }
+
+        echo "<button type='submit'>Enviar</button>";
+        echo "</form>";
+    }
+}
+
+// Crear una instancia de la clase Formulario
+$formulario = new Formulario();
+$formulario->agregarCampo("nombre", "text", "Nombre:");
+$formulario->agregarCampo("email", "email", "Email:");
+$formulario->agregarCampo("edad", "number", "Edad:");
+
+// Renderizar el formulario en el cliente
+$formulario->renderizar();
+
+
+
+//Generación de una Tabla Dinámica con Objetos
+
+class Tabla {
+    private $datos;
+
+    // Constructor para inicializar los datos de la tabla
+    public function __construct($datos) {
+        $this->datos = $datos;
+    }
+
+    // Método para renderizar la tabla
+    public function renderizar() {
+        echo "<table border='1'>";
+
+        // Encabezado de la tabla
+        echo "<tr>";
+        foreach (array_keys($this->datos[0]) as $header) {
+            echo "<th>$header</th>";
+        }
+        echo "</tr>";
+
+        // Filas de datos
+        foreach ($this->datos as $fila) {
+            echo "<tr>";
+            foreach ($fila as $dato) {
+                echo "<td>$dato</td>";
+            }
+            echo "</tr>";
+        }
+
+        echo "</table>";
+    }
+}
+
+// Datos para la tabla
+$datos = [
+    ['Nombre' => 'Juan', 'Edad' => 25, 'Ciudad' => 'Madrid'],
+    ['Nombre' => 'María', 'Edad' => 30, 'Ciudad' => 'Barcelona'],
+    ['Nombre' => 'Pedro', 'Edad' => 22, 'Ciudad' => 'Valencia']
+];
+
+// Crear una instancia de la clase Tabla y renderizarla
+$tabla = new Tabla($datos);
+$tabla->renderizar();
+
+
+//Generar una Lista de Opciones (Dropdown) Dinámicamente
+
+class Select {
+    private $opciones;
+
+    // Constructor para inicializar las opciones
+    public function __construct($opciones) {
+        $this->opciones = $opciones;
+    }
+
+    // Método para renderizar el select
+    public function renderizar($nombre) {
+        echo "<label for='$nombre'>Seleccione una opción:</label>";
+        echo "<select name='$nombre' id='$nombre'>";
+
+        foreach ($this->opciones as $valor => $etiqueta) {
+            echo "<option value='$valor'>$etiqueta</option>";
+        }
+
+        echo "</select>";
+    }
+}
+
+// Opciones para el select
+$opciones = [
+    'es' => 'Español',
+    'en' => 'Inglés',
+    'fr' => 'Francés'
+];
+
+// Crear una instancia de la clase Select y renderizarla
+$select = new Select($opciones);
+$select->renderizar("idioma");
+
+>>>>>>> 6334e5a (14/11 Semana4)
+?>

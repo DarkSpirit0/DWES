@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * text=auto eol=lf
 
 *.blade.php diff=html
@@ -9,3 +10,7 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+=======
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+UN2/ProyectoUD2/*.mp4 filter=lfs diff=lfs merge=lfs -text
+>>>>>>> 2f6d65817d756b19aa03849d5ff565edf3d3f9d5

@@ -1,0 +1,16 @@
+Nombre: Paco
+Email: 343078@gmail.com
+Tipo de entrada: Ubicacion
+-----------------------------------
+Nombre: Paco
+Email: 343078@gmail.com
+Tipo de entrada: Actividad
+-----------------------------------
+Nombre: Paco
+Email: 343078@gmail.com
+Tipo de entrada: Publico
+-----------------------------------
+Nombre: Paco
+Email: 343078@gmail.com
+Tipo de entrada: Publico
+-----------------------------------
