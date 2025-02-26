@@ -105,6 +105,16 @@
   - **3.** Migraciones y Modelos
   - **4.** Controladores
   - **5.** CRUD
-
-</details>
->>>>>>> 2f6d65817d756b19aa03849d5ff565edf3d3f9d5
+  - **7.** Seeder,Factory and Faker
+  - **8.** Relaciones
+- **2.** API
+  - **6.** API Rest
+  - **9.** Middleware API
+  - **9b.** Cliente Service
+- **3.**
+   - **10.** Auth, Breeze y Jetstream
+   - **React+Laravel.**
+   - **ReactInertia.**
+- **4.**
+   - **Testing.**
+   - **Cambiar ENV Testing.**
