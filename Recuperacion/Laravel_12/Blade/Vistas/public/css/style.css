@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1a001a);
+    color: #d1b3ff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Encabezado futurista */
+header {
+    background: rgba(20, 0, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #b266ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px #b266ff;
+}
+
+/* Estilos para los enlaces de navegación */
+nav {
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #d1b3ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Botón futurista */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #8a2be2, #ff00ff);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #ff00ff, #8a2be2);
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.9);
+    transform: scale(1.05);
+}
+
+/* Secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 0, 255, 0.3);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #b266ff;
+    text-shadow: 0 0 10px #b266ff;
+}
+
+/* Footer */
+footer {
+    background: #0a001a;
+    color: #d1b3ff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Efecto de neón */
+.neon-text {
+    font-size: 2rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+/* Animación para efectos futuristas */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff00ff; }
+    50% { text-shadow: 0 0 20px #ff00ff; }
+    100% { text-shadow: 0 0 10px #ff00ff; }
+}
+
+.glow {
+    animation: glow 1.5s infinite alternate;
+}
