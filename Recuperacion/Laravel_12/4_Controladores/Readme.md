@@ -33,6 +33,8 @@ DB_PASSWORD=
 
 ![1743949037262](image/Readme/1743949037262.jpg)
 
+**Corregir fallo de la base de datos**
+
 ### 2.2 Migraciones y Modelo
 
 - Utilizamos las del proyecto anterior
