@@ -10,7 +10,7 @@
 
 ## Introducción
 
-Este proyecto muestra cómo estructurar y poblar una base de datos en Laravel usando migraciones, seeders, factories y Faker. Ideal para pruebas y desarrollo rápido con datos realistas.
+Este proyecto muestra cómo estructurar y poblar una base de datos en Laravel usando migraciones, seeders, factories y Faker.
 
 ### Otros recursos
 
@@ -28,6 +28,7 @@ Este proyecto muestra cómo estructurar y poblar una base de datos en Laravel us
   ```bash
   php artisan make:seeder PLayerSeeder
   ```
+- **`Muy importante añadir el Has Factory en los Modelos`**
 - Editar `DatabaseSeeder.php` para llamar al seeder:
   ```php
   public function run(): void
