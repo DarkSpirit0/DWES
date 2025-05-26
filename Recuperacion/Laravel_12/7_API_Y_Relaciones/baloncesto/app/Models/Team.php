@@ -13,6 +13,7 @@ class Team extends Model
 
     public function players(): BelongsToMany
     {
-        return $this->belongsToMany(Player::class);
+        return $this->belongsToMany(Player::class, 'team_player', 'team_id', 'player_id')
+            ->withTimestamps();
     }
 }

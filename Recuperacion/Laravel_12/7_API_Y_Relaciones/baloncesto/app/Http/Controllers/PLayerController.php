@@ -6,7 +6,7 @@ use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
-use APP\Http\Resources\PlayerResource; // Assuming you have a PlayerResource for API responses
+use App\Http\Resources\PlayerResource; // Assuming you have a PlayerResource for API responses
 use App\Http\Resources\TeamResource; // Assuming you have a TeamResource for API responses
 use Illuminate\Database\Eloquent\Casts\Json;
 use App\Http\Requests\PlayerRequest; // Assuming you have a PlayerRequest for validation
