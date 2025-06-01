@@ -1,0 +1,109 @@
+/* Tipografía y colores base */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f3f4f6; /* gris muy claro */
+  color: #1f2937; /* gris oscuro */
+  margin: 0;
+  padding: 0;
+}
+
+h1, .logo-text {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.1em;
+  color: #f97316; /* naranja vibrante */
+}
+
+/* Navbar */
+nav {
+  background: #1e3a8a; /* azul intenso */
+  box-shadow: 0 4px 8px rgb(30 58 138 / 0.4);
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #f97316;
+}
+
+nav a.logo-text {
+  font-size: 2.25rem; /* 36px */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Botón de registro */
+a.bg-orange-500 {
+  box-shadow: 0 4px 12px rgb(249 115 22 / 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.bg-orange-500:hover {
+  background-color: #ea580c; /* naranja más oscuro */
+  box-shadow: 0 6px 16px rgb(234 88 12 / 0.7);
+}
+
+/* Contenido principal */
+main {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgb(0 0 0 / 0.1);
+  padding: 2rem;
+}
+
+/* Footer */
+footer {
+  color: #6b7280; /* gris medio */
+  font-size: 0.875rem;
+  border-top: 1px solid #d1d5db; /* gris claro */
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
+
+/* Links en contenido */
+a {
+  color: #1e40af; /* azul primario */
+  text-decoration: underline;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #f97316;
+}
+
+/* Mejorar inputs y botones si los tienes */
+input, button {
+  font-family: 'Inter', sans-serif;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, button:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 8px #f97316;
+}
+
+/* Responsive: mejorar padding y fuentes en móvil */
+@media (max-width: 640px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav .flex {
+    gap: 1rem;
+  }
+  nav a.logo-text {
+    font-size: 1.75rem;
+  }
+  main {
+    padding: 1rem;
+  }
+}
